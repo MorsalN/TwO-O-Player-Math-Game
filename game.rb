@@ -30,11 +30,11 @@ class Game
 
   def lost_a_life
     current_player.lives -= 1
-    puts current_player.lives, 'current_player'
+    # puts current_player.lives, 'current_player'
 
     if current_player.lives == 0
       puts "GAME OVER"
-      puts "#{other_player} won!"
+      puts "#{other_player.name} wins with a score of #{other_player.lives}/3!"
     end
   end 
 
@@ -69,16 +69,20 @@ class Game
       if q.check_answer(answer) 
         puts "#{current_player.name}: YES! You are correct."
         score
+        puts "----- NEW TURN -----"
+        # break
       else 
         puts "#{current_player.name}: Not correct!"
         lost_a_life
+        break if current_player.lives == 0
         score
+        puts "----- NEW TURN -----"
         # break based on the grading
       end
       # increment the count
       @count += 1
+      # puts @count, "count"
     end 
-
   end 
 end 
 

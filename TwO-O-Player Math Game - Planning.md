@@ -16,7 +16,7 @@ The game doesn’t end until one of the players loses all their lives. At this p
 Read the description above again and extract / write down the nouns that you feel could make for important entities (manifested in the form of classes) to contain (encapsulate) logic as part of this app.
 
 ```sh
-Player1, Player 2, Questions
+Player, Question, Game
 ```
 
 ### Task 2: 
@@ -25,9 +25,9 @@ Player1, Player 2, Questions
 What is the role for each class?
 
 ```sh
-Game Loop: 'Looping through players turns'
+Game Loop: 'Looping through players turns, New Turn if lives are greater or equal to 1 (Game Over otherwise)'
 
-Player 1 & Player 2: 'Answers question, lives remain if correct (decreases if incorrect), New Turn if lives are greater or equal to 1 (Game Over otherwise)'
+Player 1 & Player 2: 'Answers question, lives remain if correct (decreases if incorrect), '
 
 Questions: 'Addition questions from 1 to 20'
 ```
@@ -46,9 +46,9 @@ Behavior: Defining actions that can be performed on them (methods)
 'The "Player 1 & Player 2" class, will be in charge of:
 
 Potentional Methods:
-- the question that is answered correctly
+- the question that is answered correctly 
 - the question that is answered incorrectly
-- setting the state for lives if answered incorrectly
+- setting the state for lives if answered incorrectly (game)
 - output the total score 
 - if player have no more lives than output the winner and say GAME OVER
 

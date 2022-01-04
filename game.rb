@@ -35,6 +35,7 @@ class Game
     if current_player.lives == 0
       puts "GAME OVER"
       puts "#{other_player.name} wins with a score of #{other_player.lives}/3!"
+      puts "Goodbye!"
     end
   end 
 
